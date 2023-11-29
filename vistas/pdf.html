@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .comprobante {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .titulo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info {
+            margin-bottom: 10px;
+        }
+        .detalles-compra {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .detalles-compra th, .detalles-compra td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        .detalles-compra th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="comprobante">
+        <div class="titulo">Comprobante de Compras</div>
+
+        <div class="info">
+            <strong>Fecha:</strong> 23 de noviembre de 2023
+        </div>
+
+        <div class="info">
+            <strong>Nombre del Cliente:</strong> Juan Pérez
+        </div>
+
+        <div class="info">
+            <strong>Dirección de Envío:</strong> Calle 123, Ciudad, Estado
+        </div>
+
+        <table class="detalles-compra">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto A</td>
+                    <td>2</td>
+                    <td>$50.00 MXN</td>
+                    <td>$100.00 MXN</td>
+                </tr>
+                <tr>
+                    <td>Producto B</td>
+                    <td>1</td>
+                    <td>$30.00 MXN</td>
+                    <td>$30.00 MXN</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info">
+            <strong>Total de la Compra:</strong> $130.00 MXN
+        </div>
+
+        <div class="info">
+            <strong>Método de Pago:</strong> Tarjeta de Crédito
+        </div>
+
+        <div class="info">
+            <strong>Número de Transacción:</strong> 9876543210
+        </div>
+
+        <div class="info">
+            <strong>¡Gracias por tu compra!</strong>
+        </div>
+    </div>
+
+</body>
+</html>

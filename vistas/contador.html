@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Simple</title>
+</head>
+
+<body>
+
+    <h1>Contador</h1>
+    <p id="contador">0</p>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="disminuir()">Disminuir</button>
+    <button onclick="agregarCarrito()">Agregar al carrito</button>
+
+    <!-- Contador de productos -->
+
+
+    <!-- Botones para aumentar y disminuir el contador -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // Variable para almacenar el contador
+        let contador = 0;
+
+        // Función para aumentar el contador
+        function aumentar() {
+            contador++;
+            actualizarContador();
+        }
+
+        // Función para disminuir el contador (con restricción para no ser menor que cero)
+        function disminuir() {
+            if (contador > 0) {
+                contador--;
+                actualizarContador();
+            }
+        }
+
+        // Función para actualizar el contenido del elemento HTML con el contador actual
+        function actualizarContador() {
+            document.getElementById("contador").innerHTML = contador;
+            
+        }
+
+        function agregarCarrito() {
+            $.ajax({
+                url: '../controller/user/ctrlUser.php?opc=2&contador=' + contador,
+                type: 'GET',
+                success: function (response) {
+                    // Maneja la respuesta después de agregar al carrito
+                    console.log(response);
+                },
+                error: function () {
+                    // Maneja errores si la solicitud AJAX falla
+                    console.error('Error al agregar al carrito');
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
